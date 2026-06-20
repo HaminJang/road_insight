@@ -1,0 +1,13 @@
+[Unit]
+Description=Road Insight Next.js
+After=network.target
+
+[Service]
+User=ubuntu
+WorkingDirectory=/home/ubuntu/road_insight/frontend
+Environment="NEXT_PUBLIC_API_URL=https://your-domain.com/api"
+ExecStart=/usr/bin/npm start
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

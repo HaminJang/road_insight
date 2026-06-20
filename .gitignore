@@ -1,0 +1,59 @@
+# Python
+__pycache__/
+*.pyc
+venv/
+backend/venv/
+.env
+backend/.env
+
+# Node / Next.js
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/.env.local
+
+# AI model files
+*.pt
+*.onnx
+*.engine
+backend/models/*
+!backend/models/.gitkeep
+
+# Datasets and training outputs
+ml/data/*
+!ml/data/raw/
+!ml/data/raw/.gitkeep
+!ml/data/images/
+!ml/data/images/.gitkeep
+ml/dataset/images/**
+ml/dataset/labels/**
+!ml/dataset/images/
+!ml/dataset/images/train/
+!ml/dataset/images/train/.gitkeep
+!ml/dataset/images/val/
+!ml/dataset/images/val/.gitkeep
+!ml/dataset/images/test/
+!ml/dataset/images/test/.gitkeep
+!ml/dataset/labels/
+!ml/dataset/labels/train/
+!ml/dataset/labels/train/.gitkeep
+!ml/dataset/labels/val/
+!ml/dataset/labels/val/.gitkeep
+!ml/dataset/labels/test/
+!ml/dataset/labels/test/.gitkeep
+ml/runs/*
+!ml/runs/.gitkeep
+
+# Generated outputs
+backend/outputs/*
+!backend/outputs/reports/
+!backend/outputs/reports/.gitkeep
+!backend/outputs/annotated_images/
+!backend/outputs/annotated_images/.gitkeep
+*.pdf
+!docs/ir/*.pdf
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/

@@ -1,0 +1,15 @@
+[Unit]
+Description=Road Insight FastAPI
+After=network.target
+
+[Service]
+User=ubuntu
+WorkingDirectory=/home/ubuntu/road_insight/backend
+Environment="YOLO_MODEL_PATH=models/best.pt"
+Environment="MODEL_VERSION=road-insight-yolo11n-pothole-v1"
+Environment="DETECTION_CONF=0.6"
+ExecStart=/home/ubuntu/road_insight/backend/venv/bin/uvicorn app.main:app --host 127.0.0.1 --port 8000
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
