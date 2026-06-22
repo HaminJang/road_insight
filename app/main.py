@@ -20,8 +20,8 @@ def parse_allowed_origins() -> list[str]:
     raw = os.getenv(
         "ALLOWED_ORIGINS",
         "http://localhost:3000,"
-        "https://road-insight-dzokqr3c4-haminjangs-projects.vercel.app,"
-        "https://road-insight.vercel.app"
+        "https://road-insight-0622-2cpi2yfd9-haminjangs-projects.vercel.app,"
+        "https://road-insight-0622.vercel.app"
     )
     return [origin.strip() for origin in raw.split(",") if origin.strip()]
 
@@ -32,8 +32,8 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:3000",
-        "https://road-insight-dzokqr3c4-haminjangs-projects.vercel.app",
-        "https://road-insight.vercel.app"
+        "https://road-insight-0622-2cpi2yfd9-haminjangs-projects.vercel.app",
+        "https://road-insight-0622.vercel.app"
     ],
     allow_methods=["*"],
     allow_headers=["*"],
