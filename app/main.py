@@ -20,8 +20,8 @@ def parse_allowed_origins() -> list[str]:
     raw = os.getenv(
         "ALLOWED_ORIGINS",
         "http://localhost:3000,"
-        "https://roadinsightfrontend-1my492nis-haminjangs-projects.vercel.app,"
-        "https://roadinsightfrontend.vercel.app"
+        "https://road-insight-dzokqr3c4-haminjangs-projects.vercel.app,"
+        "https://road-insight.vercel.app"
     )
     return [origin.strip() for origin in raw.split(",") if origin.strip()]
 
@@ -30,7 +30,11 @@ app = FastAPI(title="Road-Insight API")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=parse_allowed_origins(),
+    allow_origins=[
+        "http://localhost:3000",
+        "https://road-insight-dzokqr3c4-haminjangs-projects.vercel.app",
+        "https://road-insight.vercel.app"
+    ],
     allow_methods=["*"],
     allow_headers=["*"],
 )
