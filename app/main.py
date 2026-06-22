@@ -30,11 +30,7 @@ app = FastAPI(title="Road-Insight API")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:3000",
-        "https://road-insight-0622-2cpi2yfd9-haminjangs-projects.vercel.app",
-        "https://road-insight-0622.vercel.app"
-    ],
+    allow_origins=parse_allowed_origins(),
     allow_methods=["*"],
     allow_headers=["*"],
 )
